@@ -1,0 +1,155 @@
+/*************************************SIDEBAR******************************/
+.Sidebar {
+  margin-top: 50px;
+}
+
+/****************************TOGGLE-BUTTON*********************/
+
+.toggle-active {
+  background: #94e9c5;
+  transition: 0.5s;
+
+}
+
+.toggle-inactive {
+  background: #999999;
+  transition: 0.5s;
+}
+
+.horizontal-border {
+  border-radius: 0px 10px 10px 0px;
+}
+
+.vertical-border {
+  border-radius: 10px 0px 0px 10px;
+}
+
+.toggle-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  cursor: pointer;
+
+  div {
+    font-size: 50px;
+    padding: 0px 30px 10px 30px;
+  }
+}
+
+.feedback-button {
+  background: #94e9c5;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 900;
+  font-size: 20px;
+}
+
+/********************************************SIDEBAR CARD******************************/
+.SideCard {
+  padding: 20px 80px;
+
+  img {
+    border-radius: 50%;
+    margin: 0 10px;
+  }
+
+  .card {
+    box-shadow: 5px 5px 10px #999;
+    border-radius: 10px;
+    text-align: center;
+  }
+}
+
+/********************************************NEWS-CARD******************************/
+
+.NewsCard {
+  padding: 10px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  img {
+    border-radius: 50%;
+  }
+
+  .card {
+    width: 92%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #999;
+  }
+
+  .Title {
+    font-weight: 900;
+  }
+
+  .Date-Time {
+    color: #999;
+    font-weight: 500;
+  }
+}
+
+.Date {
+  .Date-Time {
+    color: #999;
+    font-weight: 500;
+  }
+}
+
+.newsfeed-close {
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 10px;
+  margin-left: auto;
+
+  .btn-close {
+    color: red !important;
+    opacity: 1;
+  }
+}
+
+/********************************************PAGINATION******************************/
+
+.Pagination {
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+
+  .page-item {
+    padding: 0px 5px;
+
+    .page-link {
+      border-radius: 50%;
+      background-color: #999999;
+      color: white;
+      border: none;
+
+    }
+  }
+
+  .page-item :hover {
+    background-color: white;
+    color: black;
+    transition: 0.5s;
+  }
+}
+
+/***************************************************NEWSCARD-VERTICAL********************************/
+
+.NewsCardVertical {
+  margin-top: 50px;
+  padding: 0px 100px;
+
+  .card {
+    border-radius: 10px;
+  }
+
+  img {
+    border-radius: 5px;
+  }
+}
+
+
+@media max-width {
+
+}

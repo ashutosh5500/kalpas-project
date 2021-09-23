@@ -21,7 +21,7 @@ const NewsFeed = ({layoutType}) => {
 
     const onPaginationChange = (number) => {
         setPagination(number);
-        setPostsCopy(posts.slice((number -1) * 5, number * 5))
+        setPostsCopy(posts.slice((number - 1) * 5, number * 5))
     }
 
 

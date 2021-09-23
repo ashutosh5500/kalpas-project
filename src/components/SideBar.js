@@ -3,11 +3,14 @@ import Logo from "../assets/images/demo.jpg";
 import SidebarCard from "./SidebarCard";
 import {CardHeading, ListUl} from "react-bootstrap-icons";
 
+
 class SideBar extends Component {
 
 
     render() {
-        const {toggle, onToggleChange} = this.props
+        const {toggle, onToggleChange, weAreListeningFlag} = this.props
+
+
         return (
             <div className="Sidebar">
                 <div className={"SideCard"}>
@@ -26,22 +29,30 @@ class SideBar extends Component {
                     </div>
                 </div>
 
-                <SidebarCard headerText={"View Toggle"}
-                             iconHorizontal={
-                                 <div onClick={() => onToggleChange('HORIZONTAL')}
-                                      className={`horizontal-border ${toggle === 'HORIZONTAL' ? 'toggle-active' : 'toggle-inactive'}`}>
-                                     <ListUl/>
-                                 </div>}
-                             iconVertical={
-                                 <div onClick={() => onToggleChange('VERTICAL')}
-                                      className={`vertical-border ${toggle === 'VERTICAL' ? 'toggle-active' : 'toggle-inactive'}`}>
-                                     <CardHeading/>
-                                 </div>
+                {weAreListeningFlag ? null :
+                    <SidebarCard headerText={"View Toggle"}
+                                 iconHorizontal={
+                                     <div onClick={() => onToggleChange('HORIZONTAL')}
+                                          className={`horizontal-border ${toggle === 'HORIZONTAL' ? 'toggle-active' : 'toggle-inactive'}`}>
+                                         <ListUl/>
+                                     </div>}
+                                 iconVertical={
+                                     <div onClick={() => onToggleChange('VERTICAL')}
+                                          className={`vertical-border ${toggle === 'VERTICAL' ? 'toggle-active' : 'toggle-inactive'}`}>
+                                         <CardHeading/>
+                                     </div>
+                                 }
+                    />
+                }
+                <SidebarCard headerText={"Have a Feedback?"}
+                             feedback={(
+                                 <div onClick={this.props.show}
+                                      className={`${weAreListeningFlag ? 'feedback-red' : 'feedback-button'}`}>"We're
+                                     Listening!"</div>)
                              }
                 />
-                <SidebarCard headerText={"Have a Feedback?"}
-                             feedback={(<div className={"feedback-button"}>"We're Listening!"</div>)}
-                />
+
+
             </div>
         )
     }

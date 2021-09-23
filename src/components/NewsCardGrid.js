@@ -12,7 +12,7 @@ class NewsCardGrid extends Component {
                     <div className={"newsfeed-close"}>
                         <button type="button" className="btn-close btn-close-yellow" aria-label="Close"></button>
                     </div>
-                    <div className="card-body">
+                    <div className="card-body" key={id}>
                         <h5 className="card-title">{title}</h5>
                         <p className="card-text">{body}.</p>
                         <div className={"Date"}>

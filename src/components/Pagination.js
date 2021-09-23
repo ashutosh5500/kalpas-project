@@ -19,14 +19,14 @@ const Pagination = ({posts, onPaginationChange, pagination}) => {
                         </li>
                     }
                     {
-                        [...Array((posts.length/5)).keys()].map(item => {
+                        [...Array((posts.length / 5)).keys()].map(item => {
                             return <li className={`page-item ${(pagination === item + 1) ? 'active' : ''}`}
                                        onClick={() => onPaginationChange(item + 1)}
                             ><a className="page-link" href="#">{item + 1}</a></li>
                         })
                     }
                     {
-                        (posts.length/5) !== pagination &&  <li className="page-item" onClick={() => {
+                        (posts.length / 5) !== pagination && <li className="page-item" onClick={() => {
                             onPaginationChange(pagination + 1)
                         }}>
                             <a className="page-link" href="#" aria-label="Next">

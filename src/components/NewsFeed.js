@@ -24,11 +24,16 @@ const NewsFeed = ({layoutType}) => {
         setPostsCopy(posts.slice((number - 1) * 5, number * 5))
     }
 
+    const deletePost = (id) => {
+        console.log(id)
+        setPostsCopy(postsCopy.filter(item => item.id !== id))
+    }
+
 
     return (
         <div style={{marginTop: "50px"}}>
-            {layoutType === 'HORIZONTAL' && <NewsCardHorizontal posts={postsCopy}/>}
-            {layoutType === 'VERTICAL' && <NewsCardVertical posts={postsCopy}/>}
+            {layoutType === 'HORIZONTAL' && <NewsCardHorizontal posts={postsCopy} deletePost={deletePost}/>}
+            {layoutType === 'VERTICAL' && <NewsCardVertical posts={postsCopy} deletePost={deletePost}/>}
             <div>
                 <Pagination posts={posts}
                             pagination={pagination}

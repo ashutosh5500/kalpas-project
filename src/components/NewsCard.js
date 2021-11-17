@@ -5,7 +5,9 @@ import Logo from '../assets/images/demo.jpg'
 
 
 const NewsCard = (props) => {
-    const {title, body, dateAndTime} = props
+    const {title, body, dateAndTime , deletePost, id} = props;
+
+
     return (
         <div className={"NewsCard"}>
             <div className="card ">
@@ -22,7 +24,7 @@ const NewsCard = (props) => {
                 </div>
             </div>
             <div className={"newsfeed-close"}>
-                <button type="button" className="btn-close  btn-close-yellow" aria-label="Close"></button>
+                <button onClick={() => console.log('dfdsf')} type="button" className="btn-close  btn-close-yellow" aria-label="Close"/>
             </div>
         </div>
     );
